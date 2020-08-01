@@ -1,0 +1,5 @@
+<canvas type='2d' class='collectBox' id="canvas"
+width='100px' height='100px' style="width:100px;height:100px;"></canvas>
+
+{{width}}
+{{height}}

@@ -1,0 +1,73 @@
+<!--pages/creation/creation.wxml-->
+<cu-custom bgImage="{{page}}" isBack="{{true}}"> 
+  <view slot="backText">返回</view>
+  <view slot="content">DIY</view> 
+</cu-custom>
+<view>
+<canvas style="width: 100%; height:{{canvasHeight}}px;{{setcolor==1?'display:none':'display:block'}}" 
+canvas-id="firstCanvas" 
+bindtouchstart='touchStart' 
+bindtouchmove='touchMove' 
+></canvas>
+</view> 
+<view style="width: 100%; height:{{footer}}px;" class="footer"> 
+  <view>
+    <view class="color">
+      <view>常用颜色</view>
+      <view bindtap="opencolor" class="cuIcon-skin lg text-black" id="paletteicon"></view>
+      <view wx:for="{{basiccontent}}">
+        <view bindtap="choosecolor" class="creation-basic-content" style="background-color:{{basiccontent[index]}}" data-id="{{index}}"></view>
+      </view>
+    </view>
+    <view class="color">
+    <text>历史颜色</text>
+      <view wx:for="{{historycontent}}">
+        <view bindtap="chooseHistoryColor" class="creation-basic-content" style="background-color:{{historycontent[index]}}" data-id="{{index}}"></view>
+      </view>
+    </view>
+    <view class="finish">
+      <view class="flex solid-bottom padding-xs justify-around">
+        <view class="bg-cyan padding-sm margin-xs radius light shadow" style="width:110px;text-align: center;" bindtap="recall">撤销</view>
+        <view class="bg-red padding-sm margin-xs radius light shadow" style="width:110px;text-align: center;" bindtap="endDraw">完成</view>
+    </view>
+    </view>
+  </view>
+</view>
+<!-- 遮罩 --> 
+<view bindtap="coverbox" class="creation-size" style="{{cover==1?'display:block':'display:none'}}"></view>
+<!-- 设置尺寸 -->
+<view class="creation-size-content" style="{{set==1?'display:block':'display:none'}}">
+  <view class="creation-title">自定义画布</view>
+  <view class="creation-set">
+    <text>边长：{{row}}</text>
+    <movable-area class="move">
+      <movable-view class="move-btn" x="0" direction="horizontal" bindchange="InputRow"></movable-view>
+    </movable-area>
+  </view>
+  <view class="creation-btn">
+    <view bindtap="finishset"><text>确定</text></view>
+    <view bindtap="blackDly"><text>取消</text></view>
+  </view>
+</view>
+
+<view class="creation-size-content" style="{{setcolor==1?'display:block':'display:none'}}">
+  <view class="creation-color-title">
+    <view bindtap="palettebtn">调色板</view>
+  </view>
+  <!-- 拾色器 -->
+  <view class="creation-palette">
+    <movable-area class="creation-left" style="background: linear-gradient(to bottom, rgb({{r}},{{g}},{{b}}), #000)">
+      <movable-view id="leftbox" class="creation-left-btn" x="{{xl}}" y="{{yl}}" bindchange="onleftchange" bindtap="onleftchange" direction="all">
+      </movable-view>
+    </movable-area>
+    <movable-area id="rightbox" class="creation-right">
+      <movable-view class="creation-right-btn" x="-7rpx" y="{{yr}}" bindchange="onrightchange" bindtap="onrightchange" direction="vertical">
+      </movable-view>
+    </movable-area>
+  </view>
+  <view class="creation-now-box" >
+    <view>当前颜色:</view> 
+    <view class="creation-now" style="background-color: rgb({{rc}},{{gc}},{{bc}})"></view>
+    <button class="cu-btn round line-black" id="surebtn" bindtap="nowcolor">确定</button>
+  </view>
+</view> 

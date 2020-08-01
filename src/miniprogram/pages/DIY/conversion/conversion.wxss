@@ -1,0 +1,60 @@
+/* pages/conversion/conversion.wxss */
+#bar{
+  background-color: rgb(233, 233, 233);
+}
+.conversion-footer{
+  height: 130rpx;
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  z-index:1000
+}
+#btn{
+  padding: 20rpx 40rpx;
+  background-color: rgb(80, 161, 247);
+}
+.creation-size-content{
+  position: absolute;
+  top:80%;
+  left: 3%;
+  width:700rpx;
+  height: 150rpx;
+  border-radius: 30rpx;
+  z-index: 1000;
+}
+.move{
+  position: relative;
+  margin-top:5%;
+  margin-left:30rpx;
+  width: 650rpx;
+  height: 10rpx;
+  border: 3rpx solid rgb(191, 191, 191);
+  background-color: #fff;
+  border-radius: 10rpx;
+}
+.move-btn{
+  position: absolute;
+  top:-13rpx;
+  width: 20rpx;
+  height: 40rpx;
+  border: 1rpx solid #50A1F7;
+  background-color:#50A1F7;
+}
+.creation-btn{
+  float: left;
+  margin-top:30rpx;
+  margin-left:100rpx;
+}
+.creation-btn view{
+  padding-top: 10rpx;
+  margin-left: 330rpx;
+  width: 100rpx;
+  height: 60rpx;
+  border-radius: 10rpx;
+  border:1rpx solid #50A1F7;
+  background-color: rgb(233, 233, 233);
+}
+.creation-btn view text{
+  padding:20rpx;
+  font-size: 26rpx;
+}

@@ -1,0 +1,8 @@
+/* pages/share/drawing.wxss */
+
+.collectBox {
+  margin-top: 50px;
+  background-color: pink;
+  position: absolute;
+}
+

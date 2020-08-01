@@ -1,0 +1,38 @@
+/* pages/MY/diy/diy.wxss */
+page{
+  background-color: rgb(250, 250, 250);
+}
+.creation-size{
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgb(0, 0, 0);
+  opacity: 0.55;
+}
+.gallery-flex{
+  float:left;
+  width:49%;
+  height:380rpx;
+  margin-bottom:30rpx;
+  padding:1rpx;
+}
+.gallery-left{
+  margin-left:2%;
+}
+/* .canvas{ 
+  width:100%;
+  height:80%;
+} */
+.gallery-flex .icon{
+  font-size:50rpx;
+  margin-left:80%;
+  margin-top:10rpx;
+}
+.down{
+  float:left;
+  margin-left:10rpx;
+  font-size:40rpx;
+  margin-top:10rpx;
+}

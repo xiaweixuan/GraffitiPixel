@@ -1,0 +1,94 @@
+/* pages/DIY/DIY.wxss */
+page {
+  background-color: #fff;
+} 
+.dly-bar{
+  background-color: rgb(218, 218, 218);
+  height: 55rpx;
+}
+.dly-creation{
+  width: 690rpx;
+  height: 430rpx;
+  position: absolute;
+  top: 150rpx;
+}
+.dly-conversion{
+  width: 690rpx;
+  height: 430rpx;
+  position: absolute;
+  top: 650rpx;
+  right: 0rpx;
+}
+.dly-imagesize1{
+  width: 690rpx;
+  height: 430rpx;
+  border-radius:0 35rpx 35rpx 0;
+}
+.dly-black1{
+  position: absolute;
+  top:0;
+  left: 0;
+  opacity: 0.25;
+  width: 690rpx;
+  height: 430rpx;
+  background-color: black;
+  border-radius:0 35rpx 35rpx 0;
+}
+.dly-imagesize2{
+  width: 690rpx;
+  height: 430rpx;
+  border-radius:35rpx 0 0 35rpx;
+}
+.dly-black2{
+  position: absolute;
+  top:0;
+  left: 0;
+  opacity: 0.25;
+  width: 690rpx;
+  height: 430rpx;
+  background-color: black;
+  border-radius:35rpx 0 0 35rpx;
+}
+.dly-wold-ch1{
+  font-size: 55rpx;
+  color: #fff;
+  position: absolute;
+  top:30rpx;
+  left: 40rpx;
+}
+.dly-word-en1{
+  font-size:30rpx;
+  color: #fff;
+  position: absolute;
+  top:120rpx;
+  left: 40rpx;
+}
+.dly-wold-ch2{
+  font-size: 55rpx;
+  color: #fff;
+  position: absolute;
+  bottom:80rpx;
+  left: 400rpx;
+}
+.dly-word-en2{
+  font-size:30rpx;
+  color: #fff;
+  position: absolute;
+  bottom:30rpx;
+  left: 400rpx;
+}
+
+#pic1{
+  border: 1rpx solid red;
+  border-radius: 30rpx;
+  background-color: #fff;
+  position: fixed;
+}
+#dlybox{
+  border-radius: 30rpx;
+  width: 700rpx;
+  position: absolute;
+  top:127px;
+  background-color: #fff;
+  padding: 25rpx;
+}

@@ -1,0 +1,5 @@
+/* pages/MY/shop/shop.wxss */
+.immmm{
+	width: 100%;
+	height: 150px;
+}

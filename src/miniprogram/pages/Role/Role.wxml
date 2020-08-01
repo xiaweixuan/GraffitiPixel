@@ -1,0 +1,29 @@
+<view style="display:{{isDisplay}}">
+  <!-- 对话框 -->
+  <view style="display:{{npcSayDisplay}}">
+    <view class="imgView01">
+      <image class="img" src="./img/qipao01.png"></image>
+    </view>
+    <view class="imgView02">
+      <image class="img" src="./img/qipao02.png"></image>
+    </view>
+    <view class="imgView03">
+      <image class="img" src="./img/qipao03.png"></image>
+    </view>
+    <!-- <view class="closeMain" bindtap="close">
+      <image class="img" src="./img/close.png"></image>
+    </view> -->
+    <!-- 对话框文字 -->
+    <view id="roleArr">
+      {{string}}
+    </view>
+  </view>
+  <!-- npc style="display:{{npcDisplay}}" -->
+  <view id="roleMain" bindtap="onclick">
+    <canvas type="2d"
+      class="roleCanvas"
+      style="width:{{canvasWidth}}px;height:{{canvasHeight}}px">
+    </canvas>
+  </view>
+</view>
+

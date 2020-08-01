@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "gallery": "/pages/gallery/gallery",
+    "diy": "/pages/DIY/diy",
+    "my": "/pages/MY/my"
+  }
+}

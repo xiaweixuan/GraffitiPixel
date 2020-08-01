@@ -1,0 +1,34 @@
+<!--pages/conversion/conversion.wxml-->
+<cu-custom bgImage="{{page}}" isBack="{{true}}">
+  <view slot="backText">返回</view>
+  <view slot="content">图片转换</view>
+</cu-custom>
+<view>
+  <view> 
+    <canvas canvas-id="myCanvas" style="position:fixed;left:9000px;top:25%;width:{{imgwidth}}px;height:{{imgheight}}px;"/>
+    <canvas type='2d' id="showCanvas" style="position:fixed;left:{{beleft}}px;top:15%;width:{{showwidth}}px;height:{{showheight}}px;"/>
+    <image src="{{path}}" wx:if="{{img==true}}" style="width:{{imgw}}px;height:{{imgh}}px;position:fixed;left:{{imgleft}}px;top:15%;"></image>
+  </view>
+</view>
+
+<view class="creation-size-content" style="{{box==false?'display:none':'display:block'}}">
+  <movable-area class="move">
+    <movable-view class="move-btn" x="150" direction="horizontal" bindchange="tagchange" bindtouchend="large"></movable-view>
+  </movable-area>
+  <view style="margin-top:40rpx;margin-left:20rpx;float: left;width:150rpx">清晰度:{{definition}}</view>
+  <view class="creation-btn">
+  <button class="cu-btn round bg-blue" role="button" aria-disabled="false" bindtap="draw" style="margin-left:300rpx;background-color:rgb(80, 161, 247)">确定</button>
+  </view>
+</view>
+<view class="conversion-footer">
+  <view class="padding flex flex-direction">
+    <button class="cu-btn round bg-blue lg" bindtap="choosepic" id="btn" style="{{finish==0?'display:block':'display:none'}}">选取图片</button>
+    <button class="cu-btn round bg-blue lg" bindtap="draw" id="btn" style="{{finish==1?'display:block':'display:none'}}">转像素</button>
+    <button class="cu-btn round bg-blue lg" wx:if="{{!isAuthSavePhoto}}" bindtap="onSaveToPhone" id="btn" style="{{finish==2?'display:block':'display:none'}}">保存至手机相册</button>
+    <button class="cu-btn round bg-blue lg" wx:if="{{isAuthSavePhoto}}" bindtap="showModal" id="btn" style="{{finish==2?'display:block':'display:none'}}">保存至手机相册</button>
+  </view>
+</view>
+
+<view class='cu-load load-modal' wx:if="{{loading}}">
+  <view class='text-orange'>保存至手机相册</view>
+</view>

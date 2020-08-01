@@ -1,0 +1,97 @@
+/* pages/gallery/picDrawing/picDrawing.wxss */
+page {
+  background-color: #fff;
+} 
+#nav{
+  background-color: rgb(233, 233, 233);
+}
+.img{
+  margin-top:100rpx;
+  justify-content: center;
+}
+image{
+  width:90%;
+  height:700rpx;
+  margin-left:5%
+}
+.picdrawing-bottom{
+  z-index: 10000;
+  position:fixed;
+  bottom:0;
+  left:0;
+  width:100%;
+  height:120rpx;
+  background-color: rgb(242, 242, 242);
+}
+#finish{
+  background-color: rgb(216, 216, 216);
+}
+#btn-size{
+  width: 300rpx;
+  height: 300rpx;
+}
+button{
+  margin-top:15rpx;
+}
+.bottom-done{
+  width:130rpx;
+  height:100%;
+  float:left;
+  font-size:35rpx;
+}
+#finish-color{
+  background-color: rgb(208, 208, 208);
+}
+.tool{
+  background: url('https://6469-diandianhua-9krf5-1301722640.tcb.qcloud.la/large/QQ%E5%9B%BE%E7%89%8720200530185720.png?sign=a10f0ecc2dd0d19f9a340b9f225aada7&t=1590836365') no-repeat; 
+  position:fixed;
+  top:80%;
+  left:80%;
+  width:80rpx;
+  height:80rpx;
+  border-radius: 10rpx;
+  padding-top:30rpx;
+  padding-left:20rpx;
+  z-index: 1000;
+  background-size: cover;
+}
+.tool1{
+  background: url('https://6469-diandianhua-9krf5-1301722640.tcb.qcloud.la/large/QQ%E5%9B%BE%E7%89%8720200530185727.png?sign=7e033bbae87d928bd3efe76c41198e83&t=1590836549') no-repeat;
+  position:fixed;
+  top:80%;
+  left:65%;
+  width:80rpx;
+  height:80rpx;
+  border-radius: 10rpx;
+  padding-top:30rpx;
+  padding-left:20rpx;
+  z-index: 1000;
+  background-size: cover;
+}
+.section{
+  float:left;
+  width: 75%;
+}
+.scroll-view_H{
+  display: flex;
+  width: 100%;
+  white-space: nowrap;
+}
+.scroll-view-item_H{
+  margin-top:8rpx;
+  margin-left:30rpx;
+  display: inline-block;
+}
+.btn{
+  width: 85rpx;
+  height: 85rpx;
+  font-size: 34rpx;
+}
+.btn1{
+  border:5rpx solid black
+}
+/*画布样式*/
+.canvas{
+  z-index: 10;
+  margin-left:5%;
+}

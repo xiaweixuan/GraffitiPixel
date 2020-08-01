@@ -1,0 +1,16 @@
+/* pages/gallery/PicDetail/picDetail.wxss */
+#btn{
+  margin-top:30%;
+}
+.tagleft{
+  margin-top: 25rpx;
+  margin-right: 20rpx;
+  float: right;
+}
+.footer{
+  height: 150rpx;
+  width: 100%;
+  background-color: white;
+  position: absolute;
+  bottom: 0;
+}

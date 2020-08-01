@@ -1,0 +1,87 @@
+@import "../../colorui/main.wxss";
+@import "../../colorui/icon.wxss";
+
+.integr{
+  height: 40%;
+  padding-top: 5%;
+}
+.nowIntegr{
+  position: absolute;
+  left: 100px;
+  font-size: 12px;
+  color: #fff;
+  font-weight: bold;
+}
+.textIcon{
+  margin-right: 2px;
+}
+.convertIntger{
+  position: absolute;
+  left: 200px;
+  font-size: 12px;
+  color: #fff;
+  font-weight: bold;
+}
+.roloeName{
+  height: 60%;
+  padding-top: 4%; 
+  width: 100%;
+  text-align: center;
+  font-size: 16px;
+  color: #fff;
+  font-weight:lighter;
+}
+.roloeName text text{
+  color: #f37b1d;
+  font-weight:bold;
+}
+
+.game{
+  background-color: #fff;
+  position: relative;
+}
+.game_font{
+  position: absolute;
+  top:40%;
+  left:30%;
+  width: 40%;
+  height: 15%;
+  z-index: 1;
+}
+.img{
+  width: 100%;
+  height: 100%;
+}
+
+.tip{
+  text-align: center;
+  background-image: url('https://6469-diandianhua-9krf5-1301722640.tcb.qcloud.la/answ/456.png?sign=d535ac7d7f496cb8301fd928a2c69be0&t=1590930389');
+  background-size: 100% 100%;
+}
+.tip text{
+  color: #fff;
+  font-style: bold;
+  font-size: 12px;
+  font-weight: lighter;
+}
+.tip01{
+  height: 10%;
+  padding-top: 10%;
+}
+.tip01 text{
+  font-size: 16px;
+  /* color: #85c3f7; */
+  /* color: #fff; */
+}
+.game_canvas{
+  background-image: url('https://6469-diandianhua-9krf5-1301722640.tcb.qcloud.la/answ/aka.png?sign=1bd4cec76c8dc0fb211d047a0b334638&t=1590932354');
+  background-size: 100% 100%;
+}
+.tip02{
+  height: 10%;
+  padding-top: 10%;
+}
+.massage{
+  background-image: url('https://6469-diandianhua-9krf5-1301722640.tcb.qcloud.la/answ/234.png?sign=c841d395b11752d10277dcfc04e0b683&t=1590930403');
+  background-size: 100% auto;
+}

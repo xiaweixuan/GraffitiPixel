@@ -1,0 +1,25 @@
+<!--pages/finishchange/finishchange.wxml-->
+<cu-custom bgImage="{{page}}" isBack="{{true}}">
+  <view slot="backText">返回</view>
+  <view slot="content">图片转换</view>
+</cu-custom>
+<view class="padding">
+  <view class="finishchange-content">
+    <canvas 
+    type="2d"   
+    class="canvas"
+    id="canvas" 
+    style="width:300px;height:300px;"
+  ></canvas>
+  </view>
+</view>
+<view class="padding">
+  <view class="flex">
+      <view class="flex-sub padding-sm margin-xs radius">
+        <button class="cu-btn bg-green lg" id="finishchange-start">开始画</button>
+      </view>
+      <view class="flex-sub padding-sm margin-xs radius">
+        <button class="cu-btn bg-orange lg" id="finishchange-save">保存到DIV</button>
+      </view>
+  </view>
+</view>

@@ -1,0 +1,17 @@
+<cu-custom bgImage="{{page}}" isBack="{{true}}">
+	<view slot="content">设置</view>
+</cu-custom>
+
+<view class="cu-bar bg-white solid-bottom">
+	<view class="action">
+		npc气泡显示
+	</view>
+	<switch checked="{{isnpcsay}}" bindchange="npcSayFun"/>
+</view>
+
+<!-- <view class="cu-bar bg-white solid-bottom">
+	<view class="action">
+		npc显示
+	</view>
+	<switch checked="{{isnpc}}" bindchange="npcFun"/>
+</view> -->

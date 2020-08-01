@@ -1,0 +1,21 @@
+<!--pages/MY/setting/setting.wxml-->
+<cu-custom bgImage="{{page}}" isBack="{{true}}">
+	<view slot="content">团队</view>
+</cu-custom>
+
+<view class="cu-bar bg-white solid-bottom">
+	<view class="action">
+		<text class='cuIcon-title text-blue'></text>开发人员
+	</view>
+</view>
+<view class="cu-bar bg-white solid-bottom">
+	<view class="action">
+		hebtu software
+	</view>
+</view>
+<view class="cu-bar bg-white solid-bottom">
+	<view class="action">
+		夏炜轩 李沛伦 司涵 张晓焕 候瑞琪
+	</view>
+</view>
+

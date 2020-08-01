@@ -1,0 +1,19 @@
+<!--miniprogram/pages/share/colordraw/colordraw.wxml-->
+<canvas 
+  type="2d" 
+  bindtap="tap" 
+  bindtouchstart="touchstart" 
+  bindlongtap="longtap" 
+  bindtouchmove="touchmove" 
+  bindtouchend="touchend" 
+  id="canvas" 
+  class="canvas"
+  style="left:{{pic.left}}px;top:{{pic.top}}px;"  
+  ></canvas>
+
+<view wx:for="{{colorList}}" class="list" >
+<view bindtap="listTap" id="{{item}}">
+  {{item}}
+  </view>
+</view>
+<button bindtap="toPic">完成</button>

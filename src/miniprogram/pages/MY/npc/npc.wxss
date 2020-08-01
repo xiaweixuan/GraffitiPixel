@@ -1,0 +1,38 @@
+/* pages/MY/npc/npc.wxss */
+.immmm{
+	width: 100%;
+	height: 150px;
+}
+.outside{
+  width: 100%;
+  height: 450rpx;
+}
+.zinpc{
+  width: 468rpx;
+  height: 136rpx;
+  position: absolute;
+  top:95px;
+  left: 10rpx;
+}
+.tu{
+  width: 230rpx;
+  height: 370rpx;
+  position: absolute;
+  top:95px;
+  left: 500rpx;
+}
+.wenzi{
+  position: absolute;
+  top:165px;
+  left: 23rpx;
+}
+.wenzi view{
+  font-size: 32rpx;
+}
+.progress{
+  width: 438rpx;
+  height: 80rpx;
+  position: absolute;
+  top:210px;
+  left: 23rpx;
+}

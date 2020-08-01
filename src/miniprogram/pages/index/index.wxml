@@ -1,0 +1,36 @@
+<!-- 
+
+<gallery wx:if="{{PageCur=='gallery'}}"></gallery>
+<diy wx:if="{{PageCur=='diy'}}"></diy>
+<my wx:if="{{PageCur=='my'}}"></my>
+<view class="cu-bar tabbar bg-white shadow foot">
+  <view class="action {{PageCur=='gallery'?'text-blue':'text-gray'}}" bindtap="NavChange" data-cur="gallery">
+    <view class='cuIcon-cu-image'>
+      <view class="cuIcon-album}"></view>
+    </view>
+    <view>图库</view>
+  </view>
+  <view class="action {{PageCur=='diy'?'text-blue':'text-gray'}}" bindtap="NavChange" data-cur="diy">
+    <view class='cuIcon-cu-image'>
+      <view class="cuIcon-add"></view>
+    </view>
+    <view>DIY</view>
+  </view>
+  <view class="action {{PageCur=='my'?'text-blue':'text-gray'}}" bindtap="NavChange" data-cur="my">
+    <view class='cuIcon-cu-image'>
+      <view class="cuIcon-people"></view>
+    </view>
+    <view>我的</view>
+  </view>
+</view> -->
+<!-- <view class="collectBox"  animation="{{animationData}}" catchtouchmove="buttonMove" catchtouchstart="buttonStart" catchtouchend="buttonEnd" style="position: absolute;top:{{buttonTop}}px;left:{{buttonLeft}}px;width: 100px;height: 40px">
+123
+</view> -->
+<view class='collectBox' 
+  bindtouchmove="touchmove" 
+  catchtouchmove="touchmove" 
+  style="left:{{write[0]}}px;top:{{write[1]}}px;">
+  
+</view>
+
+

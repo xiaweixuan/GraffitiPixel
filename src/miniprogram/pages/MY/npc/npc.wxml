@@ -1,0 +1,46 @@
+<!--pages/MY/npc/npc.wxml-->
+<cu-custom bgImage="{{page}}" isBack="{{true}}">
+	<view slot="content">人物</view>
+</cu-custom>
+<view class="outside">
+	<image class="zinpc"
+	src='https://6469-diandianhua-9krf5-1301722640.tcb.qcloud.la/images/renwu/%E5%AD%97.png?sign=9ed0b8d71a2af29f989aa86d5c04900a&t=1590672565'></image>
+	<image class="tu"
+	src='https://6469-diandianhua-9krf5-1301722640.tcb.qcloud.la/nnn.png?sign=6c834c7b76365ab2440b4c155b535270&t=1590821671'></image>
+	<view class="wenzi">
+		<view>涂鸦像素散落着可爱的npc伙伴，</view>
+		<view>请勇士们努力收集他们吧！</view>
+	</view>
+	<view class="progress">
+		<view class="cu-progress round margin-top">
+			<view class="bg-red" style="width:{{percent}}%;">{{amount}}/{{sum}}</view>
+		</view>
+	</view>
+</view>
+
+<view class="grid col-2 padding-sm">
+	<view class="padding-xs" wx:for="{{aka}}">
+		<view class="bg-white radius padding-xs">
+			<image class="immmm" src='{{item.path}}'></image>
+			<view class="flex justify-center">
+				<button wx:if="{{aa[index]==false}}" data-judge="{{item.npcid}}"
+				bindtap="showModal" class="cu-btn round"
+				style="margin-top:8px">
+					<text>装备</text>
+				</button>
+				<button wx:if="{{aa[index]==true}}" class="cu-btn round bg-orange"
+				style="margin-top:8px">
+					<text>已装备</text>
+				</button>
+			</view>
+		</view>
+  </view>
+</view>
+
+<view class='cu-load load-modal' wx:if="{{loadModal}}">
+  <view class='cuIcon-clothesfill text-orange'></view>
+  <view class='gray-text'>装备中...</view>
+</view>
+<view class='cu-load load-modal' wx:if="{{load}}">
+  <view class='cuIcon-search text-orange'></view>
+</view>

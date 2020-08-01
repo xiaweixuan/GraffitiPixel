@@ -1,0 +1,72 @@
+<!--pages/MY/shop/shop.wxml-->
+<cu-custom bgImage="{{page}}" isBack="{{true}}">
+	<view slot="content">商城</view>
+</cu-custom>
+
+<view class="cu-modal {{modalName=='DialogModal1'?'show':''}}">
+  <view class="cu-dialog">
+    <view class="cu-bar bg-white justify-end">
+      <view class="content">涂鸦像素提示</view>
+      <view class="action" bindtap="hideModal">
+        <text class="cuIcon-close text-red"></text>
+      </view>
+    </view>
+    <view class="padding-xl">确定购买此人物？</view>
+    <view class="cu-bar bg-white justify-end">
+      <view class="action">
+        <button class="cu-btn line-green text-green" bindtap="hideModal">取消</button>
+        <button class="cu-btn bg-green margin-left" bindtap="check">确定</button>
+      </view>
+    </view>
+  </view>
+</view>
+
+<view class="cu-modal {{modalName=='DialogModal'?'show':''}}">
+  <view class="cu-dialog">
+    <view class="cu-bar bg-white justify-end">
+      <view class="content">涂鸦像素提示</view>
+      <view class="action" bindtap="hideModal">
+        <text class="cuIcon-close text-red"></text>
+      </view>
+    </view>
+    <view class="padding-xl">您的积分不足</view>
+    <view class="cu-bar bg-white justify-end">
+      <view class="action">
+        <button class="cu-btn bg-green margin-left" bindtap="hideModal">确定</button>
+      </view>
+    </view>
+  </view>
+</view>
+
+<view class="grid col-2 padding-sm">
+  <view class="padding-xs" wx:for="{{aka}}" wx:key="index">
+    <view class="bg-white radius padding-xs">
+		  <image class="immmm" src='{{item.path}}'></image>
+      <view class="flex solid-bottom padding-xs justify-between">
+      <view class="radius">
+        <view style="margin-top:10px">积分：{{item.icon}}</view>
+      </view>
+      <view class="radius">
+        <button wx:if="{{aa[index]==false}}" data-icon="{{item.icon}}"
+        style="float:right;margin-top:8px"
+        data-targett="DialogModal" data-target="DialogModal1"
+        data-judge="{{index}}" bindtap="showModal" class="cu-btn round sm">
+          <text>兑换</text>
+        </button>
+        <button style="float:right;margin-top:8px" wx:if="{{aa[index]==true}}"
+        data-icon="{{item.icon}}" class="cu-btn round sm bg-orange">
+          <text>已兑换</text>
+        </button>
+      </view>
+    </view>
+    </view>
+  </view>
+</view>
+
+<view class='cu-load load-modal' wx:if="{{loadModal}}">
+  <view class='cuIcon-clothesfill text-orange'></view>
+  <view class='gray-text'>兑换中...</view>
+</view>
+<view class='cu-load load-modal' wx:if="{{load}}">
+  <view class='cuIcon-search text-orange'></view>
+</view>

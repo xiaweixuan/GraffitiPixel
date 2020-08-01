@@ -1,0 +1,30 @@
+<!--pages/gallery/picDrawing/picDrawing.wxml-->
+<cu-custom class="cu-bar" id="nav" isBack="{{true}}">
+</cu-custom>
+<view class="img padding" flex="1">
+  <!-- <image src="{{List[0].url}}"></image> -->
+<canvas style="width: {{canvasWidth}}px; height:{{canvasHeight}}px;left:{{canvasLeft}}px;top:{{canvasTop}}px;" 
+canvas-id="firstCanvas" 
+class="canvas"
+catchtouchstart='touchStart' 
+catchtouchmove='touchMove' 
+catchtouchend='touchEnd'></canvas>
+</view>
+<!-- 工具 -->
+<!-- <view class="tool bg-grey">
+  <text class="text-white">工具</text>
+</view> -->
+<view class="picdrawing-bottom">
+  <view bindtap="endDraw" class="bottom-done bg-grey padding">
+    完成
+  </view>
+   <view class="section">
+     <scroll-view class="scroll-view_H" scroll-x="true">
+       <view class="scroll-view-item_H" wx:for="{{colorList}}" wx:key="index">
+        <button class="btn {{choosecolor[index]==1?'btn1':''}}" style="background-color:{{colorList[index]}};" bindtap="changecolor" id="{{index}}">
+          <view style="color:white">{{index+1}}</view>
+        </button>
+      </view>
+    </scroll-view>
+  </view>
+</view>

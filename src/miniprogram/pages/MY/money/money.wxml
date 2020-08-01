@@ -1,0 +1,82 @@
+<!--pages/MY/money/money.wxml-->
+<cu-custom bgImage="{{page}}" isBack="{{true}}">
+	<view slot="content">数据库测试</view>
+</cu-custom>
+
+
+<!-- <view class="page"> -->
+  <!--顶部导航栏-->
+  <!-- <view class="swiper-tab">
+    <view class="tab-item {{currentTab==0 ? 'on' : ''}}" data-current="0" bindtap="swichNav">Tab1</view>
+    <view class="tab-item {{currentTab==1 ? 'on' : ''}}" data-current="1" bindtap="swichNav">Tab2</view>
+    <view class="tab-item {{currentTab==2 ? 'on' : ''}}" data-current="2" bindtap="swichNav">Tab3</view>
+  </view> -->
+
+  <!--内容主体-->
+  <!-- <swiper class="swiper" current="{{currentTab}}" duration="200" bindchange="swiperChange">
+    <swiper-item>
+      <view>我是tab1</view>
+    </swiper-item>
+    <swiper-item>
+      <view>我是tab2</view>
+    </swiper-item>
+    <swiper-item>
+      <view>我是tab3</view>
+    </swiper-item>
+  </swiper>
+</view> -->
+
+
+<form bindsubmit='subData'>
+	<input type='text' bindinput='dname' name='drawname' placeholder='画的名称'/>
+	<input type='text' name='row' placeholder='行'/>
+	<input type='text' name='col' placeholder='列'></input>
+	<input type='text' maxlength="9999999999999" name='data' placeholder='图画'></input>
+	<input type='text' maxlength="9999999999999" name='history' placeholder='历史'></input>
+	<input type='text' maxlength="9999999999999" name='historyPath' placeholder='历史视频'></input>
+  <input type='text' name='tag' placeholder='分类'></input>
+  <input type='text' name='coin' placeholder='面值'></input>
+	<button formType="submit">传数据库</button>
+</form>
+
+<form bindsubmit='akb'>
+	<input type='text' bindinput='dname' name='drawname' placeholder='画的名称'/>
+	<button formType="submit">传数据库</button>
+</form>
+
+<button bindtap="onQuery">查询'ceshi'数据库</button>
+<view wx:for="{{queryResult}}">
+	<view >
+		{{item._id}}
+		<button size="mini" data-test='2' 
+		data-id='{{item._id}}' bindtap="onRemove">删除记录</button>
+		<button size="mini" 
+		data-test='2' data-id='{{item._id}}' bindtap="ziDuan">添加字段</button>
+	</view>
+</view>
+
+<view class="uploader">
+	<button class="uploader-text" bindtap="doUpload">
+		<text>上传图片</text>
+    </button>
+    <!-- <view class="uploader-container" wx:if="{{imgUrl}}">
+		<image class="uploader-image" src="{{imgUrl}}" mode="aspectFit" bindtap="previewImg"></image>
+    </view> -->
+</view>
+
+<button class="list-item" bindtap="testFunction">
+      测试云函数
+    </button>
+    <view class="list-item" wx:if="{{result}}">
+      <text class="request-text">调用结果：{{result}}</text>
+    </view>
+
+	<view class="list-item" wx:for="{{dbresult}}">
+      <text class="request-text">调用的数据：{{item.username}}</text>
+    </view>
+
+<view class="cu-bar bg-white solid-bottom">
+	<view class="action">
+		<text class='cuIcon-title text-blue'></text>暂未开发
+	</view>
+</view>

@@ -1,0 +1,19 @@
+<!--pages/MY/details/details.wxml-->
+<cu-custom bgImage="{{page}}" isBack="{{true}}">
+	<view slot="content">图片详情</view>
+</cu-custom>
+
+<view style="height:30px;width:100%">
+
+</view>
+
+<view class="flex-sub padding justify-center margin-xs radius">
+	<view class="flex-sub padding justify-center margin-xs radius" style="border:5rpx solid black;">
+		<image src='https://ss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=1769624544,3866945691&fm=26&gp=0.jpg'></image>
+	</view>
+</view>
+
+<view class="grid col-2 padding-sm justify-around">
+	<button class="cu-btn bg-green margin-tb-sm lg">重新绘制</button>
+	<button class="cu-btn bg-green margin-tb-sm lg">保存图片</button>
+</view>

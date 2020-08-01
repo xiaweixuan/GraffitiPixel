@@ -1,0 +1,236 @@
+/* pages/creation/creation.wxss */
+page {
+  background-color: #fff;
+} 
+.creation-bar{
+  background-color: rgb(233, 233, 233);
+  height: 55rpx;
+}
+.creation-nav{
+  height: 102rpx;
+  background-color:rgb(233, 233, 233);
+}
+#creation-close{
+  padding-top: 25rpx;
+  margin-left: 40rpx;
+  font-size: 50rpx;
+}
+.footer{
+  background-color: rgb(249, 249, 249);
+  position: absolute;
+  bottom: 0;
+  padding:20rpx;
+}
+#paletteicon{
+  font-size: 60rpx;
+  margin-top: 15rpx;
+  margin-right: 10rpx;
+  width: 60rpx;
+  float: left;
+}
+#creation-finish{
+  font-size: 60rpx;
+  margin-top: 10rpx;
+  margin-right: 20rpx;
+  width: 60rpx;
+  float: right;
+}
+.color{
+  height: 140rpx;
+  width: 100%;
+}
+.finish{
+  border-top: 1px solid rgb(226, 226, 226);
+}
+/* 设置尺寸 */
+.creation-size{
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgb(0, 0, 0);
+  opacity: 0.55;
+  z-index: 90;
+}
+.creation-size-content{
+  position: absolute;
+  top:20%;
+  left: 16%;
+  width: 500rpx;
+  height: 680rpx;
+  background-color: #ffffff;
+  border-radius: 30rpx;
+  z-index: 100;
+}
+.creation-title{
+  font-size: 30rpx;
+  padding-top: 20rpx;
+  padding-left: 190rpx;
+  padding-bottom: 20rpx;
+  font-weight: 500;
+  color: rgb(0, 0, 0);
+  border-bottom: 1rpx solid rgb(226, 226, 226);
+}
+.creation-set{
+  height: 60rpx;
+  margin-left: 40rpx;
+  margin-top: 60rpx;
+}
+.creation-set text{
+  font-size: 35rpx;
+}
+.creation-input{
+  float: left;
+  width: 350rpx;
+  height: 50rpx;
+  border:1rpx solid rgb(182, 182, 182);
+}
+.creation-btn{
+  margin-top: 230rpx;
+} 
+.creation-btn view{
+  padding-top: 13rpx;
+  margin-left: 30rpx;
+  float: left;
+  width: 200rpx;
+  height: 60rpx;
+  border-radius: 20rpx;
+  border:1rpx solid rgb(182, 182, 182);
+}
+.creation-btn view text{
+  margin-left: 76rpx;
+  font-size: 25rpx;
+}
+.creation-color-title{
+  width: 500rpx;
+  height: 100rpx;
+  border-top-left-radius: 30rpx;
+  border-top-right-radius: 30rpx;
+  background-color: rgb(208, 208, 208);
+  padding-top: 25rpx;
+}
+.creation-color-title view{
+  font-size: 32rpx;
+  color: #fff;
+  text-align: center;
+}
+.creation-basic-block{
+  border-top-left-radius: 30rpx;
+  background-color: #fff;
+  color: black;
+}
+.creation-basic-none{
+  border-top-left-radius: 30rpx;
+  background-color: rgb(226, 226, 226);
+  color: rgb(114, 114, 114);
+}
+.creation-change-block{
+  border-top-right-radius: 30rpx;
+  background-color: #fff;
+  color: black;
+}
+.creation-change-none{
+  border-top-right-radius: 30rpx;
+  background-color: rgb(226, 226, 226);
+  color: rgb(114, 114, 114);
+}
+.creation-basic{
+  width: 455rpx;
+  height: 540rpx;
+  margin-top:120rpx;
+  margin-left: 25rpx;
+}
+.creation-basic-content{
+  opacity: 1;
+  float: left;
+  width: 75rpx;
+  height: 75rpx;
+  margin-right: 10rpx;
+  margin-top: 20rpx;
+  border-radius: 20rpx;
+  border:0.5rpx solid rgb(226, 226, 226);
+}
+/* 拾色器 */
+.creation-palette{
+  margin-top: 40rpx;
+  margin-left: 30rpx;
+  z-index: 1000;
+}
+.creation-left{
+  position: relative;
+  float: left;
+  width: 360rpx;
+  height: 360rpx;
+  border: 3rpx solid rgb(191, 191, 191);
+}
+.creation-right{
+  position: relative;
+  float: left;
+  margin-left:30rpx;
+  width: 60rpx;
+  height: 360rpx;
+  border: 3rpx solid rgb(191, 191, 191);
+  background: -webkit-linear-gradient(top, rgb(255,0,0) 0%, rgb(255,255,0) 17%, rgb(0,255,0) 33%, rgb(0,255,255) 50%, rgb(0,0,255) 67%, rgb(255,0,255) 83%, rgb(255,0,0)100%);
+}
+.creation-left-btn{
+  height: 40rpx;
+  width: 40rpx;
+  position: absolute;
+  border-radius: 20rpx;
+  border: 1rpx solid rgb(191, 191, 191);
+  background-color: rgba(255, 255, 255, 0.5);
+}
+.creation-right-btn{
+  position: absolute;
+  width: 70rpx;
+  height: 25rpx;
+  border: 1rpx solid rgb(191, 191, 191);
+  background-color: rgba(255, 255, 255, 0.5);
+}
+.creation-now{
+  width: 50rpx;
+  height: 50rpx;
+  border-radius: 25rpx;
+  border: 1rpx solid rgb(191, 191, 191);
+}
+.creation-now-box{
+  margin-left: 40rpx;
+  width: 200rpx;
+  height: 40rpx;
+}
+.creation-now-box view{
+  margin-top: 40rpx;
+  float: left;
+}
+#surebtn{
+  float: left;
+  width: 130rpx;
+  margin-left: 310rpx;
+  margin-top: -50rpx;
+}
+.creation-now{
+  margin-top: 10rpx;
+  margin-left: 10rpx;
+}
+/*画布样式*/
+.canvas{
+  z-index: 10;
+}
+.move{
+  position: relative;
+  margin-top:10%;
+  width: 440rpx;
+  height: 10rpx;
+  border: 3rpx solid rgb(191, 191, 191);
+  background-color: #fff;
+  border-radius: 10rpx;
+}
+.move-btn{
+  position: absolute;
+  top:-13rpx;
+  width: 20rpx;
+  height: 40rpx;
+  border: 1rpx solid #50A1F7;
+  background-color:#50A1F7;
+}

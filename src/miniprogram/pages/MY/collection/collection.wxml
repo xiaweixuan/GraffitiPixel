@@ -1,0 +1,24 @@
+<!--pages/MY/collection/collection.wxml-->
+<cu-custom bgImage="{{page}}"  isBack="{{true}}">
+	<view slot="content">收藏</view>
+</cu-custom>
+
+<view class="padding" wx:if="{{collection[0]?'display:block':'display:none'}}">
+  <view wx:for="{{listdetail}}" >
+    <view class="bg-white gallery-flex radius {{index%2==0?'':'gallery-left'}}" bindtap='click' data-id="{{index}}">
+        <canvas type="2d" id="canvas{{index}}" class="canvas"
+        bindtap="picDetail" style="width:150px;height:150px;">
+        
+        </canvas>
+        <view class="cuIcon-delete icon" bindtap='delete' data-test="{{item}}"></view>
+    </view>
+  </view>
+</view>
+
+<view class='cu-load load-modal' wx:if="{{loadModal}}">
+  <view class='cuIcon-deletefill text-orange'></view>
+  <view class='gray-text'>删除中...</view>
+</view>
+<view class='cu-load load-modal' wx:if="{{load}}">
+  <view class='cuIcon-search text-orange'></view>
+</view>

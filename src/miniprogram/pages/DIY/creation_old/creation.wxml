@@ -1,0 +1,76 @@
+<!--pages/creation/creation.wxml-->
+<view class="creation-bar"></view>
+<view class="creation-nav">
+	<view class="cuIcon-close lg text-black" id="creation-close" bindtap="blackDly"></view>
+</view>  
+<view>
+<canvas type="2d" catchtap="tap" catchlongtap="longtap"
+catchtouchmove="touchmove" catchtouchend="touchend" id="canvas"
+class="canvas"
+style="left:{{pic.left}}px;top:{{pic.top}}px;{{setcolor==1?'display:none':'display:block'}};width:{{canvasw}}px;height:{{canvash}}px;margin-top:{{margintop}}px;margin-left:{{marginleft}}px"  
+></canvas>
+</view>
+<view class="creation-footer">
+  <view bindtap="opencolor" class="cuIcon-skin lg text-black" id="paletteicon"></view>
+  <view bindtap="recall" class="cuIcon-repeal lg text-black" id="paletteicon"></view>
+  <view bindtap="endDraw" class="cuIcon-check lg text-black" id="creation-finish"></view>
+</view>
+<!-- 遮罩 --> 
+<view bindtap="coverbox" class="creation-size" style="{{cover==1?'display:block':'display:none'}}"></view>
+<!-- 设置尺寸 -->
+<view class="creation-size-content" style="{{set==1?'display:block':'display:none'}}">
+  <view class="creation-title">自定义画布</view>
+  <view class="creation-set">
+    <text>高：</text>
+    <input type="number" class="creation-input" value="{{row}}" bindinput='InputRow'></input>
+  </view>
+  <view class="creation-set">
+    <text>宽：</text>
+    <input type="number" class="creation-input" value='{{col}}' bindinput='InputCol'></input>
+  </view>
+  <view class="creation-btn">
+    <view bindtap="finishset"><text>确定</text></view>
+    <view bindtap="blackDly"><text>取消</text></view>
+  </view>
+</view>
+
+<view class="creation-size-content" style="{{setcolor==1?'display:block':'display:none'}}">
+  <view class="creation-color-title">
+    <view bindtap="showbtn" class="{{basiccolor?'creation-basic-block':'creation-basic-none'}}">预设颜色</view>
+    <view bindtap="palettebtn" class="{{palette?'creation-change-block':'creation-change-none'}}">调色板</view>
+  </view>
+  <!-- 预设颜色 -->
+  <view class="creation-basic" style="{{basiccolor?'display:block':'display:none'}}">
+    <view>
+      <text>常用颜色</text>
+      <view wx:for="{{basiccontent}}">
+        <view bindtap="choosecolor" class="creation-basic-content" style="background-color:{{basiccontent[index]}}" data-id="{{index}}"></view>
+      </view>
+    </view>
+    <view class="creation-history">
+      <text>历史颜色</text>
+      <scroll-view class="creation-history-box" scroll-y="true">
+        <view wx:for="{{historycontent}}">
+          <view bindtap="chooseHistoryColor" class="creation-basic-content" style="background-color:{{historycontent[index]}}" data-id="{{index}}"></view>
+        </view>
+      </scroll-view>
+    </view>
+  </view>
+  <!-- 拾色器 -->
+  <view class="creation-palette" style="{{palette?'display:block':'display:none'}}">
+    <movable-area class="creation-left" style="background: linear-gradient(to bottom, rgb({{r}},{{g}},{{b}}), #000)">
+      <movable-view id="leftbox" class="creation-left-btn" x="{{xl}}" y="{{yl}}" bindchange="onleftchange" bindtap="onleftchange" direction="all">
+      </movable-view>
+    </movable-area>
+    <movable-area id="rightbox" class="creation-right">
+      <movable-view class="creation-right-btn" x="-7rpx" y="{{yr}}" bindchange="onrightchange" bindtap="onrightchange" direction="vertical">
+      </movable-view>
+    </movable-area>
+  </view>
+  <view class="creation-now-box" style="{{palette?'display:block':'display:none'}}">
+    <view>当前颜色:</view> 
+    <view class="creation-now" style="background-color: rgb({{rc}},{{gc}},{{bc}})"></view>
+    <button class="cu-btn round line-black" id="surebtn" bindtap="nowcolor">确定</button>
+  </view>
+</view> 
+

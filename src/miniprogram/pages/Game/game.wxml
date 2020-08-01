@@ -1,0 +1,51 @@
+<!-- 手机状态栏 -->
+<cu-custom bgImage="https://6469-diandianhua-9krf5-1301722640.tcb.qcloud.la/answ/123.png?sign=f49e4ac11affbae48db1c64b50a8770e&t=1590930341" isBack="{{true}}">
+	<view slot="content">跑酷</view>
+</cu-custom>
+
+<!-- 手机内容 --> 
+<view style="width:{{screenWidth}}px;height:{{gameHeight}}px;" bindtap="gameJump">
+  <view class="massage" style="height:{{integrHeight}}px;">
+    <view class="integr">
+      <view class="nowIntegr" style="width:120px;">
+        <text class="cuIcon-selectionfill text-orange textIcon"></text>
+        <text>当前分数：{{nowIntegr}}</text>
+      </view>
+      <view class="convertIntger" style="width:120px;">
+        <text class="cuIcon-coin text-orange textIcon"></text>
+        <text>兑换积分：{{convertInter}}</text>
+      </view>
+    </view>
+    <view class="roloeName">
+      <text>来和 <text>{{roleName}}</text> 一起跑酷吧！</text>
+    </view>
+  </view>
+
+  <view class="game" style="width:{{canvasWidth}}px;height:{{canvasHeight}}px">
+    <view class="game_font" style="display:{{startShow}}" catchtap="gameStart">
+      <image src="./img/start.png" class="img"></image>
+    </view>
+    <view class="game_font" style="display:{{overShow}}" catchtap="gameOver">
+      <image src="./img/over.png" class="img"></image>
+    </view>
+    <canvas type="2d" id="myCanvas" class="game_canvas"
+    style="width:{{canvasWidth}}px;height:{{canvasHeight}}px;">
+    </canvas>
+  </view>
+
+  <view class="tip" style="height:{{tipHeight}}px;">
+    <view class="tip01">
+      <text>游戏宝典：</text>
+    </view>
+    <view class="tip02">
+      <text class="">点击跳跃，尽量躲开更多的障碍物，获得更多分数</text>
+    </view>
+    <view class="tip02">
+      <text class="">点击游戏结束，分数将自动兑换为积分</text>
+    </view>
+  </view>
+</view>
+
+<view class='cu-load load-modal' wx:if="{{load}}">
+  <view class='cuIcon-game text-orange'></view>
+</view>

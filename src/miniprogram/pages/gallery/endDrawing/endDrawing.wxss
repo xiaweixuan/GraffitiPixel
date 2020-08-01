@@ -1,0 +1,70 @@
+/* pages/gallery/endDrawing/endDrawing.wxss */
+#nav{
+  background-color: rgb(233, 233, 233);
+}
+#finish-return{
+  margin-top: 30rpx;
+  margin-left: 30rpx;
+  width: 70rpx;
+  height: 70rpx;
+  background-color: rgb(218, 218, 218);
+  border-radius: 35rpx;
+  padding-top: 18rpx;
+  padding-left: 16rpx;
+  font-size: 35rpx;
+}
+.img{
+  margin-top:50rpx;
+  justify-content: center;
+}
+image{
+  width:90%;
+  height:700rpx;
+  margin-left:5%;
+}
+.creation-footer{
+  background-color: rgb(255, 255, 255);
+  height: 120rpx;
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  padding-left: 25rpx;
+  padding-right: 25rpx;
+}
+.set{
+  width: 140rpx;
+  height: 80rpx;
+  float: left;
+  text-align: center;
+}
+.setr{
+  width: 140rpx;
+  height: 80rpx;
+  float: right;
+  text-align: center;
+}
+#paletteicon{
+  font-size: 60rpx;
+  margin-top: 20rpx;
+  margin-left: 40rpx;
+  width: 60rpx;
+  float: left;
+}
+#paletteiconshare{
+  font-size:30rpx;
+  background-color: rgb(218, 218, 218);
+  margin-top: 20rpx;
+  margin-left: 40rpx;
+  float: left;
+  border:0
+}
+.canvas{
+  margin: 0 auto;
+}
+#creation-finish{
+  margin-top: 20rpx;
+  margin-left: 330rpx; 
+}
+
+
+

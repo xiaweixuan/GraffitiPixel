@@ -1,0 +1,57 @@
+{
+  "pages": [
+    "pages/gallery/gallery",
+    "pages/MY/my",
+    "pages/gallery/test/test",
+    "pages/gallery/endDrawing/endDrawing",
+    "pages/share/drawing",
+    "pages/DIY/creation/creation",
+    "pages/DIY/conversion/conversion",
+    "pages/DIY/diy",
+    "pages/index/index",
+    "pages/share/drawing/drawing",
+    "pages/gallery/picDrawing/picDrawing",
+    "pages/share/test",
+    "pages/Game/game",
+    "pages/Role/Role",
+    "pages/MY/knowledge/knowledge"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "ColorUI",
+    "navigationStyle": "custom",
+    "navigationBarTextStyle": "white"
+  },
+  "usingComponents": {
+    "cu-custom": "/colorui/components/cu-custom"
+  },
+  "tabBar": {
+    "color": "#a9b7b7",
+    "selectedColor": "#11cd6e",
+    "borderStyle": "black",
+    "backgroundColor": "#ffffff",
+    "list": [
+      {
+        "text": "首页",
+        "pagePath": "pages/gallery/gallery",
+        "selectedIconPath": "images/tabbar/q.png",
+        "iconPath": "images/hq.png"
+      },
+      {
+        "text": "DIY",
+        "pagePath": "pages/DIY/diy",
+        "selectedIconPath": "images/tabbar/x.png",
+        "iconPath": "images/hx.png"
+      },
+      {
+        "text": "我的",
+        "pagePath": "pages/MY/my",
+        "selectedIconPath": "images/tabbar/t.png",
+        "iconPath": "images/ht.png"
+      }
+    ]
+  },
+  "sitemapLocation": "sitemap.json"
+
+}

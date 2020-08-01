@@ -1,0 +1,20 @@
+<!--pages/finish/finish.wxml-->
+<cu-custom bgImage="{{page}}" isBack="{{false}}">
+	<view slot="content">保存</view>
+</cu-custom>
+  <canvas type="2d" class="canvas" id="canvas"
+  style="width:300px;height:300px;"
+  ></canvas>
+
+<view class="creation-footer padding-top-xs">
+  <view class="bg-orange padding-sm margin-xs radius light shadow set" wx:if="{{!isAuthSavePhoto}}" bindtap="onSaveToPhone" >下载</view>
+  <view class="bg-orange padding-sm margin-xs radius light shadow set" wx:if="{{isAuthSavePhoto}}" bindtap="showModal">下载</view>
+  <view class="bg-red padding-sm margin-xs radius shadow light setr" bindtap="savediy">保存diy</view>
+</view>
+
+<view class='cu-load load-modal' wx:if="{{load}}">
+  <view class='text-orange'>保存中</view>
+</view>
+<view class='cu-load load-modal' wx:if="{{loading}}">
+  <view class='text-orange'>保存至手机相册</view>
+</view>

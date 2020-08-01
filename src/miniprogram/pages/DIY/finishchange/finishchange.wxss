@@ -1,0 +1,19 @@
+/* pages/finishchange/finishchange.wxss */
+.finishchange-content{
+  height: 900rpx;
+  border-radius: 30rpx;
+  border:2rpx solid black;
+}
+.finishchange-btn{
+  position: fixed;
+  bottom: 80rpx;
+  border:2rpx solid black;
+}
+#finishchange-start{
+  float: left;
+  width: 300rpx;
+}
+#finishchange-save{
+  float: right;
+  width: 300rpx;
+}

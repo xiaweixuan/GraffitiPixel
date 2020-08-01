@@ -1,0 +1,26 @@
+.page {
+
+  margin-left: 10rpx;
+  margin-right: 10rpx;
+}
+.swiper-tab {
+  display: flex;
+  flex-direction: row;
+  line-height: 80rpx;
+  border-bottom: 2rpx solid #777;
+}
+.tab-item {
+  width: 33.3%;
+  text-align: center;
+  font-size: 15px;
+  color: #777;
+}
+.swiper {
+  height: 1100px;
+  background: #dfdfdf;
+}
+.on {
+  color: blue;
+  border-bottom: 5rpx solid blue;
+
+}

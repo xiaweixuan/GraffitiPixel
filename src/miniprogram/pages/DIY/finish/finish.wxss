@@ -1,0 +1,45 @@
+/* pages/finish/finish.wxss */
+
+.set{
+  width: 140rpx;
+  height: 80rpx;
+  float: left;
+  text-align: center;
+}
+.setr{
+  width: 140rpx;
+  height: 80rpx;
+  float: right;
+  text-align: center;
+}
+.creation-footer{
+  background-color: rgb(255, 255, 255);
+  height: 120rpx;
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  padding-left: 25rpx;
+  padding-right: 25rpx;
+}
+#paletteicon{
+  font-size: 60rpx;
+  margin-top: 20rpx;
+  margin-left: 40rpx;
+  width: 60rpx;
+  float: left;
+}
+#paletteiconshare{
+  font-size:30rpx;
+  background-color: rgb(218, 218, 218);
+  margin-top: 20rpx;
+  margin-left: 40rpx;
+  float: left;
+  border:0
+}
+#creation-finish{
+  margin-top: 20rpx;
+  margin-left: 400rpx;
+}
+.canvas{
+  margin: 0 auto;
+}

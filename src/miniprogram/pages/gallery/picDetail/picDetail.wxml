@@ -1,0 +1,66 @@
+<!--pages/gallery/PicDetail/picDetail.wxml-->
+<cu-custom bgImage="{{page}}" isBack="{{true}}"> 
+  <view slot="backText">返回</view>
+  <view slot="content">图片详情</view>
+</cu-custom>
+<view class="cu-capsule tagleft" style="{{isbuy==1?'display:block':'display:none'}}">
+  <view class="cu-tag bg-red">
+    <text class="cuIcon-likefill"></text>
+  </view>
+  <view class="cu-tag line-red">
+    已购买
+  </view>
+</view>
+<view class="cu-capsule tagleft" style="{{isfree==1?'display:block':'display:none'}}">
+  <view class="cu-tag bg-blue light">
+    <text class="cuIcon-likefill"></text>
+  </view>
+  <view class="cu-tag line-blue light">
+    免费
+  </view>
+</view>
+  <canvas 
+    type="2d"   
+    class="canvas" 
+    id="canvas" 
+    style="width:300px;height:300px;margin-top:50rpx;margin-left:{{marginleft}}px;"
+  ></canvas>
+<view class="footer">
+  <view class="flex solid-bottom padding-xs justify-between">
+      <view class="padding-xs margin-xs radius">
+        <view style="font-size:32rpx">作品：{{history}}</view>
+        <view class="margin-top-sm">
+          <text style="font-size:35rpx;" class="cuIcon-coin text-orange"></text>
+          <text style="font-size:35rpx;">  {{coin}}</text>
+        </view>
+        
+      </view>
+      <view class="padding-sm margin-xs radius">
+        <button wx:if="{{done==0}}" class="cu-btn bg-orange round lg button-hover"  bindtap="start" data-target="bottomModal">开始画</button>
+        <button wx:if="{{done==1}}" class="cu-btn bg-orange round lg button-hover"  bindtap="start" data-target="bottomModal">继续画</button>
+      </view>
+  </view>
+</view>
+
+<view class="cu-modal {{modalName=='bottomModal'?'show':''}}">
+  <view class="cu-dialog">
+    <view class="cu-bar bg-white justify-end">
+      <view class="content">涂鸦像素提示</view>
+      <view class="action" bindtap="hideModal">
+        <text class="cuIcon-close text-red"></text>
+      </view>
+    </view>
+    <view class="padding-xl">
+      您的积分不足
+    </view>
+    <view class="cu-bar bg-white justify-end">
+      <view class="action">
+        <button class="cu-btn bg-green margin-left" bindtap="hideModal">确定</button>
+      </view>
+    </view>
+  </view>
+</view>
+
+<view class='cu-load load-modal' wx:if="{{load}}">
+  <view class='cuIcon-search text-orange'></view>
+</view>

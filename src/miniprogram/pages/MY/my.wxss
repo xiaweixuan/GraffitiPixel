@@ -1,0 +1,75 @@
+/* pages/MY/my.wxss */
+
+#pic-size {
+  width: 180rpx;
+  height: 180rpx;
+}
+
+.playgame {
+  position: fixed;
+  right: -12px;
+  top: 103px;
+  border-radius: 30px;
+}
+.creation-size-content{
+  position: absolute;
+  top:25%;
+  left: 16%;
+  width: 500rpx;
+  height: 600rpx;
+  background-color: #ffffff;
+  border-radius: 30rpx;
+  z-index: 10000;
+}
+.creation-title{
+  font-size: 40rpx;
+  padding-top: 15rpx;
+  padding-left: 200rpx;
+  padding-bottom: 15rpx;
+  font-weight: 500;
+  color: #4fd4f5;
+}
+.creation-title1{
+  font-size: 30rpx;
+  padding-top: 15rpx;
+  padding-left: 150rpx;
+  padding-bottom: 15rpx;
+  font-weight: 500;
+  color:#4fd4f5;
+  border-bottom: 1rpx solid rgb(226, 226, 226);
+}
+.creation-set{
+  height: 60rpx;
+  margin-left: 40rpx;
+  margin-top: 50rpx;
+}
+.creation-set text{
+  font-size: 35rpx;
+}
+.creation-btn{
+  margin-top: 130rpx;
+} 
+.creation-btn view{
+  padding-top: 10rpx;
+  margin-left: 115rpx;
+  width: 250rpx;
+  height: 70rpx;
+  border-radius: 20rpx;
+  background-color: #4fd4f5;
+  border:1rpx solid rgb(182, 182, 182);
+}
+.creation-btn view text{
+  margin-left: 90rpx;
+  font-size: 35rpx;
+  color:#ffffff;
+}
+.creation-size{
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgb(0, 0, 0);
+  opacity: 0.55;
+  z-index: 1050;
+}

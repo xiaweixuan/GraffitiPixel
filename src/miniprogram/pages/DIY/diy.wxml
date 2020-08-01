@@ -1,0 +1,41 @@
+<!--pages/DIY/DIY.wxml-->
+<view class="bg-img align-center"
+style="background-image: url('https://6469-diandianhua-9krf5-1301722640.tcb.qcloud.la/japimage/20.gif?sign=34fbd549c07b29caee7bd8c8bd027e37&t=1590729028');height: 180px;"></view>
+
+<view class="padding">
+  <view id="dlybox">
+    <view class="bg-img bg-mask padding-tb-xl" bindtap="tocreation" data-target="DialogModal1"
+    style="background-image: url('https://6469-diandianhua-9krf5-1301722640.tcb.qcloud.la/japimage/6.gif?sign=59d4d1f1ca3de9bcda956bf70f4951d9&t=1590728944');height: 414rpx;">
+      <view class="padding-xl text-white">
+        <view class="padding-xs text-xl">制作</view>
+        <view class="padding-xs">Self creation</view>
+      </view>
+    </view>
+    <view class="bg-img bg-mask padding-tb-xl" bindtap="toconversion" data-target="DialogModal1"
+    style="background-image: url('https://6469-diandianhua-9krf5-1301722640.tcb.qcloud.la/japimage/10.gif?sign=0bc90945081154ad86764f8dc8f5cf4c&t=1590728958');height: 414rpx;margin-top:30rpx;">
+      <view class="padding-xl text-white">
+        <view class="padding-xs text-xl">图片转换</view>
+        <view class="padding-xs">Picture conversion</view>
+      </view>
+    </view>
+  </view>
+</view>
+<role id="role"></role>
+<view class="cu-modal {{modalName=='DialogModal1'?'show':''}}">
+  <view class="cu-dialog">
+    <view class="cu-bar bg-white justify-end">
+      <view class="content">涂鸦像素提示</view>
+      <view class="action" bindtap="hideModall">
+        <text class="cuIcon-close text-red"></text>
+      </view>
+    </view>
+    <view class="padding-xl">
+      未登录，点击下方按钮到‘我的’登录
+    </view>
+    <view class="cu-bar bg-white justify-end">
+      <view class="action">
+        <button class="cu-btn bg-green margin-left" bindtap="hideModal">去登录</button>
+      </view>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,41 @@
+<!--pages/gallery/picDrawing/picDrawing.wxml-->
+<cu-custom bgImage="{{page}}" isBack="{{true}}"> 
+  <view slot="backText">返回</view>
+  <view slot="content">图片详情</view>
+</cu-custom>
+<view class="img padding" flex="1">
+  <!-- <image src="{{List[0].url}}"></image> -->
+  <canvas 
+    type="2d" 
+    bindtap="tap" 
+    catchlongtap="longtap"  
+    catchtouchmove="touchmove" 
+    catchtouchend="touchend" 
+    id="canvas" 
+    class="canvas"
+
+    style="left:{{pic.left}}px;top:{{pic.top}}px;width:{{width}}px;height:{{height}}px;"  
+
+  ></canvas>
+</view>
+<!-- 工具 -->
+<view class="tool1" bindtap="large">
+</view>
+<view class="tool" bindtap="small">
+</view>
+<view class="picdrawing-bottom">
+  <view bindtap="endDraw" class="bottom-done bg-orange padding-xs">
+  <view class="margin-top-sm">
+    <text class="cuIcon-evaluate lg">完成</text>
+  </view>
+  </view>
+   <view class="section">
+     <scroll-view class="scroll-view_H" scroll-x="true">
+       <view class="scroll-view-item_H" wx:for="{{colorList}}" wx:key="index">
+        <button class="btn {{choosecolor[index]==1?'btn1':''}}" style="background-color:{{colorList[index]}};" bindtap="changecolor" id="{{index}}">
+          <view style="color:white">{{index+1}}</view>
+        </button>
+      </view>
+    </scroll-view>
+  </view>
+</view>

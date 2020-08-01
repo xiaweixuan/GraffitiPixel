@@ -1,0 +1,40 @@
+<!--miniprogram/pages/MY/knowledge/knowledge.wxml-->
+<cu-custom bgImage="{{page}}" isBack="{{true}}">
+	<view slot="content">知识小问答</view>
+</cu-custom>
+
+<view class="bg-img padding-tb-xl" 
+style="background-image: url('{{back}}');height: {{height}}px;">
+  <view style="{{fraction==true?'display:block':'display:none'}};text-align:center;"> 
+    <view class="num" style="position:fixed;top:{{height*0.2}}px;left:{{width*0.4}}px">
+      <text>第{{num1}}题</text>
+    </view>
+  </view>
+  
+  <view style="{{fraction==true?'display:block':'display:none'}};position:fixed;top:{{height*0.32}}px;left:{{left}}px;width:{{width*0.7}}px;">
+    <view class="question">{{data.question}}</view>
+    <view wx:for="{{data.answer}}" wx:key="index" wx:for-item="item" style="margin-top:15rpx;margin-left:30rpx">
+      <view style="width:{{width*0.7}}px;height:80rpx;position:relative;" bindtap="choose" data-id="{{index}}" class="choose">
+        <view style="font-size:40rpx;margin-top:15rpx">{{data.answer[index]}}</view>
+        <view class="cuIcon-check lg text-green" wx:if="{{data.num==index&&right==true}}" style="font-size:70rpx;font-weight:bold;position:absolute;left:{{width*0.5}}px;top:0px"></view>
+        <view class="cuIcon-close lg text-red" wx:if="{{choosenum==index}}" style="font-size:70rpx;font-weight:bold;position:absolute;left:{{width*0.5}}px;top:0px"></view>
+      </view>
+    </view>
+  </view>
+
+  <!-- 遮罩 -->
+  <view class="cover" style="{{cover==true?'display:block':'display:none'}};{{fraction==false? 'opacity: 0.3':' opacity: 0'}}">
+    
+  </view>
+
+  <view class="kuang" style="{{fraction==false?'display:block':'display:none'}};position:fixed;top:{{height*0.25}}px;left:{{width*0.15}}px;width:{{width*0.7}}px;height:500rpx;">
+    <view class="pic">
+      <image src="{{icco}}" class="piccontent"></image>
+    </view>
+    <view style="margin-top:40rpx;text-align:center;">
+      <text style="font-size:30rpx;">得分：</text>
+      <text style="font-size:50rpx;color:red;">{{number}}</text>
+    </view>
+    <view bindtap="add" class="coin">点我对换积分吧！</view>
+  </view>
+</view>

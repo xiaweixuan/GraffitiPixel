@@ -1,0 +1,11 @@
+/* miniprogram/pages/share/colordraw/colordraw.wxss */
+#canvas{
+  margin: auto;
+  margin-top: 60px;
+}
+.list{
+  margin-top: 100px;
+  margin-left: 15px;
+  display: inline-block;
+  background-color: red;
+}

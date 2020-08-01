@@ -1,0 +1,128 @@
+<!--pages/MY/my.wxml-->
+<view class="bg-img align-center" 
+style="background-image: url('https://6469-diandianhua-9krf5-1301722640.tcb.qcloud.la/japimage/30.gif?sign=70f67837f31b3e814ce33a539ee7cb67&t=1590729579');height: 180px;">
+  <view class="flex justify-center">
+    <button style="margin-top:160px" wx:if="{{!hasUserInfo && canIUse}}"
+    open-type="getUserInfo" bindgetuserinfo="getUserInfo"
+    class='cu-btn round bg-green shadow'> 获取头像昵称 </button>
+    <block wx:else>
+      <view style="margin-top:100px" class='text-center'>
+        <view class="cu-avatar round solids" id="pic-size"
+        style="background-image:url({{userInfo.avatarUrl}})"></view>
+        <view class="padding">
+          {{userInfo.nickName}}
+          <text class="cuIcon-coin text-orange"></text>
+          <text class="text-orange" bindtap="box">{{integral}}</text>
+        </view>
+      </view>
+    </block>
+  </view>
+</view>
+<view class="creation-size" style="{{box==true?'display:block':'display:none'}}"></view>
+<view class="creation-size-content" style="{{box==true?'display:block':'display:none'}}">
+  <view class="creation-title">积分</view>
+  <view class="creation-title1">使用获取说明</view>
+  <view class="creation-set">
+     <text>使用积分：画图、购买人物</text>
+  </view>
+  <view class="creation-set">
+     <text>获取积分：DIY制作、知识小问答</text>
+  </view>
+  <view class="creation-btn">
+    <view bindtap="certain"><text>确定</text></view>
+  </view>
+</view>
+
+<view style="height:60px;width:100%;">
+  <image mode="scaleToFill" class="gif-black response"
+  src="https://6469-diandianhua-9krf5-1301722640.tcb.qcloud.la/images/mygif/wave.gif?sign=06104db0494da2bea829a9cc8de243c0&t=1588993231"
+  style="z-index:-10;margin-top:-100px;height:100rpx"></image>
+</view>
+<!-- <button class="cu-btn bg-cyan shadow playgame"
+bindtap="game" data-target="DialogModal1">来玩小游戏</button>  -->
+
+<view class="cu-list grid col-3" >
+  <view bindtap="jumpworks" data-target="DialogModal1"
+  class="cu-item" v-for="(item,index) in 3" :key="index" >
+    <view class="cuIcon-selectionfill text-red">
+    </view>
+    <text>作品</text>
+  </view>
+  <view bindtap="jumpcollection" data-target="DialogModal1"
+  class="cu-item" v-for="(item,index) in 3" :key="index" >
+    <view class="cuIcon-favorfill text-red">
+    </view>
+    <text>收藏</text>
+  </view>
+  <view bindtap="jumpdiy" data-target="DialogModal1"
+  class="cu-item" v-for="(item,index) in 3" :key="index" >
+    <view class="cuIcon-discoverfill text-red">
+    </view>
+    <text>DIY</text>
+  </view>
+</view>
+  
+<view class="cu-list menu sm-border  margin-top" >
+  <view bindtap="jumpans" data-target="DialogModal1" class="cu-item arrow" >
+    <view  class="content">
+      <text class="cuIcon-writefill text-grey"></text>
+			<text class="text-grey">知识小问答</text>
+		</view>
+  </view>
+  <view bindtap="jumpshop" data-target="DialogModal1" class="cu-item arrow" >
+    <view  class="content">
+      <text class="cuIcon-goodsfill text-grey"></text>
+			<text class="text-grey">商城</text>
+		</view>
+  </view>
+  <view bindtap="jumpnpc" data-target="DialogModal1" class="cu-item arrow" >
+    <view class="content">
+      <text class="cuIcon-emojifill text-grey"></text>
+			<text class="text-grey">人物</text>
+		</view>
+  </view>
+  <!-- <view bindtap="jumpsetting" data-target="DialogModal1" class="cu-item arrow" >
+    <view class="content">
+      <text class="cuIcon-friendfill text-grey"></text>
+			<text class="text-grey">团队</text>
+		</view>
+  </view> -->
+  <view bindtap="jumpnpcset" data-target="DialogModal1" class="cu-item arrow" >
+    <view class="content">
+      <text class="cuIcon-settings text-grey"></text>
+			<text class="text-grey">设置</text>
+		</view>
+  </view>
+  <!-- <view bindtap="jumpabout" data-target="DialogModal1" class="cu-item arrow" >
+    <view class="content">
+      <text class="cuIcon-infofill text-grey"></text>
+			<text class="text-grey">画布</text>
+		</view>
+  </view> -->
+  <!-- <view bindtap="jumpmoney" data-target="DialogModal1" class="cu-item arrow" >
+    <view class="content">
+      <text class="cuIcon-rechargefill text-grey"></text>
+			<text class="text-grey">打赏</text>
+		</view>
+  </view> -->
+</view>
+<role id="role"></role>
+
+<view class="cu-modal {{modalName=='DialogModal1'?'show':''}}">
+  <view class="cu-dialog">
+    <view class="cu-bar bg-white justify-end">
+      <view class="content">涂鸦像素提示</view>
+      <view class="action" bindtap="hideModal">
+        <text class="cuIcon-close text-red"></text>
+      </view>
+    </view>
+    <view class="padding-xl">
+      未登录，点击‘获取头像昵称’进行授权
+    </view>
+    <view class="cu-bar bg-white justify-end">
+      <view class="action">
+        <button class="cu-btn bg-green margin-left" bindtap="hideModal">去登录</button>
+      </view>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,185 @@
+<cu-custom bgImage="{{page}}">
+  <view style="font-weight:bold" slot="content">涂鸦像素</view>
+</cu-custom>
+<!-- 推荐栏 -->
+<view class="box">
+  <scroll-view class="scroll-view_H" scroll-x="true">
+    <view class="nav bg-white">
+      <view class="cu-item {{index==TabCur?'text-blue':''}}"
+      wx:for="{{tabNav}}" wx:key="index" bindtap='tabSelect'
+      data-id="{{index}}">
+        {{tabNav[index]}}
+      </view>
+    </view>
+  </scroll-view>
+</view>
+<!-- 轮播图 -->
+<view wx:if="{{TabCur==0}}">
+  <swiper class="screen-swiper" autoplay="true"
+  interval="5000" circular="true">
+    <swiper-item wx:for="{{swiperList}}" wx:key="idx" wx:for-item="item">
+      <view data-target="DialogModal1" bindtap='{{item.bind}}'
+      class="bg-img bg-mask padding-tb-xl"
+      style="background-image: url('{{item.url}}');height: 414rpx;">
+        <view class="padding-xl text-white">
+          <view class="padding-xs text-xl">{{item.name}}</view>
+          <view class="padding-xs">{{item.introduce}}</view>
+        </view>
+      </view>
+    </swiper-item>
+  </swiper>
+</view>
+<!-- 图画 -->
+<view class="grid col-2 padding" wx:if="{{TabCur==0}}" style="height:{{height}}rpx">
+  <view wx:for="{{List}}" wx:key="index" wx:for-item="item">
+    <view class="bg-white gallery-flex radius {{index%2==0?'':'gallery-left'}}" data-id="{{index}}" style="width:{{width}}px">
+        <canvas type="2d" id="canvas0{{index}}" class="canvas"
+        bindtap="picDetail" data-target="DialogModal1"
+        style="width:{{minwidth}}px;height:{{minwidth}}px;margin-left:10px;">
+
+        </canvas>
+        <text wx:if="{{grade[index]==true}}" class="cuIcon-tag text-red"></text>
+        <text wx:if="{{grade[index]==false}}" class="cuIcon-coin text-orange"></text>
+        <text wx:if="{{grade[index]==false}}" class="text-orange"> {{item.coin}}</text>
+      <view bindtap='Change' data-targett="DialogModal1t" data-target="DialogModal1" 
+      class="cuIcon-favorfill {{collectionList[index]==1?'text-orange':''}} icon"
+      data-test="{{item._id}}" data-id="{{index}}"></view>
+    </view>
+  </view>
+</view>
+<view class="bottom1" wx:if="{{TabCur==0}}"></view>
+<view class="grid col-2 padding" wx:if="{{TabCur==1}}" style="height:{{height}}rpx">
+  <view wx:for="{{List}}" wx:key="index" wx:for-item="item">
+    <view class="bg-white gallery-flex radius {{index%2==0?'':'gallery-left'}}" data-id="{{index}}" style="width:{{width}}px">
+      <canvas type="2d" id="canvas1{{index}}" class="canvas"
+      bindtap="picDetail" data-target="DialogModal1"
+      style="width:{{minwidth}}px;height:{{minwidth}}px;margin-left:10px;">
+      
+      </canvas>
+      <text wx:if="{{grade[index]==true}}" class="cuIcon-tag text-red"></text>
+      <text wx:if="{{grade[index]==false}}" class="cuIcon-coin text-orange"></text>
+      <text wx:if="{{grade[index]==false}}" class="text-orange"> {{item.coin}}</text>
+      <view bindtap='Change' data-targett="DialogModal1t" data-target="DialogModal1"
+      class="cuIcon-favorfill {{collectionList[index]==1?'text-orange':''}} icon"
+      data-test="{{item._id}}" data-id="{{index}}"></view>
+    </view>
+  </view>
+</view>
+<view class="bottom1" wx:if="{{TabCur==1}}"></view>
+<view class="grid col-2 padding" wx:if="{{TabCur==2}}" style="height:{{height}}rpx">
+  <view wx:for="{{List}}" wx:key="index" wx:for-item="item">
+    <view class="bg-white gallery-flex radius {{index%2==0?'':'gallery-left'}}" data-id="{{index}}" style="width:{{width}}px">
+      <canvas data-target="DialogModal1" type="2d" id="canvas2{{index}}"
+      class="canvas" bindtap="picDetail"
+      style="width:{{minwidth}}px;height:{{minwidth}}px;margin-left:10px;">
+      
+      </canvas>
+      <text wx:if="{{grade[index]==true}}" class="cuIcon-tag text-red"></text>
+      <text wx:if="{{grade[index]==false}}" class="cuIcon-coin text-orange"></text>
+      <text wx:if="{{grade[index]==false}}" class="text-orange"> {{item.coin}}</text>
+      <view data-targett="DialogModal1t" data-target="DialogModal1" bindtap='Change'
+      data-test="{{item._id}}" data-id="{{index}}"
+      class="cuIcon-favorfill {{collectionList[index]==1?'text-orange':''}} icon"></view>
+    </view>
+  </view>
+</view>
+<view class="bottom1" wx:if="{{TabCur==2}}"></view>
+<view class="grid col-2 padding" wx:if="{{TabCur==3}}" style="height:{{height}}rpx">
+  <view wx:for="{{List}}" wx:key="index" wx:for-item="item">
+    <view class="bg-white gallery-flex radius {{index%2==0?'':'gallery-left'}}" data-id="{{index}}" style="width:{{width}}px">
+        <canvas data-target="DialogModal1" type="2d" id="canvas3{{index}}"
+        class="canvas" bindtap="picDetail"
+        style="width:{{minwidth}}px;height:{{minwidth}}px;margin-left:10px;">
+
+        </canvas>
+        <text wx:if="{{grade[index]==true}}" class="cuIcon-tag text-red"></text>
+        <text wx:if="{{grade[index]==false}}" class="cuIcon-coin text-orange"></text>
+        <text wx:if="{{grade[index]==false}}" class="text-orange"> {{item.coin}}</text>
+        <view data-targett="DialogModal1t" data-target="DialogModal1" bindtap='Change' 
+        data-test="{{item._id}}" data-id="{{index}}"
+        class="cuIcon-favorfill {{collectionList[index]==1?'text-orange':''}} icon" ></view>
+    </view>
+  </view>
+</view>
+<view class="bottom1" wx:if="{{TabCur==3}}"></view>
+<view class="grid col-2 padding" wx:if="{{TabCur==4}}" style="height:{{height}}rpx">
+  <view wx:for="{{List}}" wx:key="index" wx:for-item="item">
+    <view class="bg-white gallery-flex radius {{index%2==0?'':'gallery-left'}}" data-id="{{index}}" style="width:{{width}}px">
+        <canvas type="2d" data-target="DialogModal1" id="canvas4{{index}}"
+        class="canvas" bindtap="picDetail"
+        style="width:{{minwidth}}px;height:{{minwidth}}px;margin-left:10px;">
+
+        </canvas>
+        <text wx:if="{{grade[index]==true}}" class="cuIcon-tag text-red"></text>
+        <text wx:if="{{grade[index]==false}}" class="cuIcon-coin text-orange"></text>
+        <text wx:if="{{grade[index]==false}}" class="text-orange"> {{item.coin}}</text>
+        <view bindtap='Change' data-targett="DialogModal1t" data-target="DialogModal1"
+        data-test="{{item._id}}" data-id="{{index}}"
+        class="cuIcon-favorfill {{collectionList[index]==1?'text-orange':''}} icon" ></view>
+    </view>
+  </view>
+</view>
+<view class="bottom1" wx:if="{{TabCur==4}}"></view>
+<view class="grid col-2 padding" wx:if="{{TabCur==5}}" style="height:{{height}}rpx">
+  <view wx:for="{{List}}" wx:key="index" wx:for-item="item">
+    <view class="bg-white gallery-flex radius {{index%2==0?'':'gallery-left'}}" data-id="{{index}}" style="width:{{width}}px">
+        <canvas type="2d" data-target="DialogModal1" id="canvas5{{index}}"
+        class="canvas" bindtap="picDetail"
+        style="width:{{minwidth}}px;height:{{minwidth}}px;margin-left:10px;">
+
+        </canvas>
+        <text wx:if="{{grade[index]==true}}" class="cuIcon-tag text-red"></text>
+        <text wx:if="{{grade[index]==false}}" class="cuIcon-coin text-orange"></text>
+        <text wx:if="{{grade[index]==false}}" class="text-orange"> {{item.coin}}</text>
+        <view bindtap='Change' data-targett="DialogModal1t" data-target="DialogModal1"
+        data-test="{{item._id}}" data-id="{{index}}"
+        class="cuIcon-favorfill {{collectionList[index]==1?'text-orange':''}} icon" ></view>
+    </view>
+  </view>
+</view>
+<view class="bottom1" wx:if="{{TabCur==5}}"></view>
+<view class="grid col-2 padding" wx:if="{{TabCur==6}}" style="height:{{height}}rpx">
+  <view wx:for="{{List}}" wx:key="index" wx:for-item="item">
+    <view class="bg-white gallery-flex radius {{index%2==0?'':'gallery-left'}}" 
+    data-id="{{index}}" style="width:{{width}}px">
+      <canvas type="2d" data-target="DialogModal1" id="canvas6{{index}}"
+      class="canvas" bindtap="picDetail"
+      style="width:{{minwidth}}px;height:{{minwidth}}px;margin-left:10px;">
+      
+      </canvas>
+      <text wx:if="{{grade[index]==true}}" class="cuIcon-tag text-red"></text>
+      <text wx:if="{{grade[index]==false}}" class="cuIcon-coin text-orange"></text>
+      <text wx:if="{{grade[index]==false}}" class="text-orange"> {{item.coin}}</text>
+      <view bindtap='Change' data-targett="DialogModal1t" data-target="DialogModal1"
+      data-test="{{item._id}}" data-id="{{index}}"
+      class="cuIcon-favorfill {{collectionList[index]==1?'text-orange':''}} icon" ></view>
+    </view>
+  </view>
+</view>
+<view class="bottom1" wx:if="{{TabCur==6}}"></view>
+<role id="role"></role>
+
+<view class="cu-modal {{modalName=='DialogModal1'?'show':''}}">
+  <view class="cu-dialog">
+    <view class="cu-bar bg-white justify-end">
+      <view class="content">涂鸦像素提示</view>
+      <view class="action" bindtap="hideModall">
+        <text class="cuIcon-close text-red"></text>
+      </view>
+    </view>
+    <view class="padding-xl">
+      未登录，点击下方按钮到‘我的’登录
+    </view>
+    <view class="cu-bar bg-white justify-end">
+      <view class="action">
+        <button class="cu-btn bg-green margin-left" bindtap="hideModal">去登录</button>
+      </view>
+    </view>
+  </view>
+</view>
+
+<view class="cu-modal {{modalNamet=='DialogModal1t'?'show':''}}">
+  <view class='cu-load load-modal'>
+    <view class='text-orange'>收藏中...</view>
+  </view>
+</view>

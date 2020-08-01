@@ -1,0 +1,31 @@
+<!-- <cu-custom bgColor="bg-gradual-blue">
+  <view slot="content">像素绘图工具</view>
+</cu-custom> -->
+
+<!-- <text style="color:red">
+{{
+  pic.row
+}}
+</text> -->
+<canvas 
+animation="{{animationData}}"
+  type="2d" 
+  catchtouchstart="tap" 
+  bindlongtap="longtap"  
+  catchtouchmove="touchmove" 
+  catchtouchend="touchend" 
+  id="canvas" 
+  class="canvas"
+  style="left:{{left}}px;top:{{top}}px;"  
+></canvas>
+
+<!-- <input type="color" id="ipt" bindinput="bindinput" value="{{color}}"/>
+<button bindtap="changeColor">确定换色</button>
+<button bindtap="recall">撤回</button>
+<button bindtap="redraw">重画</button>
+<button bindtap="clearSene">清屏/保留当前绘图过程</button>
+<button bindtap="topic">绘制完成</button> -->
+
+
+
+

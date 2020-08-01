@@ -1,0 +1,4 @@
+/* pages/MY/details/details.wxss */
+page{
+  background-color: rgb(250, 250, 250);
+}

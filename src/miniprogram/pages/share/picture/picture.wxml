@@ -1,0 +1,23 @@
+<!--miniprogram/pages/share/picture/picture.wxml-->
+<!--图片显示-->
+<canvas 
+  type="2d"   
+  class="canvas"
+  id="canvas"
+></canvas>
+
+<!--图片灰色色呈现-->
+<canvas 
+  type="2d"   
+  class="canvas2"
+  id="canvas2"
+></canvas>
+
+<!--图片绘制过程-->
+<canvas 
+  type="2d"   
+  class="canvas3"
+  id="canvas3"
+></canvas>
+
+<button bindtap="tocolordraw">为这幅画上色</button>

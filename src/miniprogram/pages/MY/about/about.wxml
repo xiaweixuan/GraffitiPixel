@@ -1,0 +1,21 @@
+<!--pages/MY/about/about.wxml-->
+<cu-custom bgImage="{{page}}" isBack="{{true}}">
+	<view slot="content">关于</view>
+</cu-custom>
+
+<canvas style="width: 100%; height:{{canvasHeight}}px" 
+canvas-id="firstCanvas" 
+bindtouchstart='touchStart' 
+bindtouchmove='touchMove' 
+bindtouchend='touchEnd'></canvas>
+<view class='scroll_box'>
+  <scroll-view scroll-x style="width: auto;height:auto;whilte-space:nowrap;overflow:hidden;">
+    <view class="scroll-view-item_H" wx:for="{{colors}}" wx:for-index="index" wx:key="color-picker">
+      <view wx:if="{{curColorIndex == index}}" id="{{index}}" class='scroll-view-item-selected' style="background:{{item}};" bindtap='colorItemTouchAction'></view>
+      <view wx:if="{{curColorIndex != index}}" id="{{index}}" class='scroll-view-item-unselected' style="background:{{item}};" bindtap='colorItemTouchAction'></view>
+    </view>
+  </scroll-view>
+</view>
+<button type="default" style='margin-top:10px;margin-left:10px;' size='mini' bindtap="finish" hover-class="other-button-hover"> 输出数据 </button>
+
+<button type="default" style='margin-top:10px;margin-left:10px;' size='mini' bindtap="saveToPhotoAlbumAction" hover-class="other-button-hover"> 保存相册 </button>
